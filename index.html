@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>할 일 목록 앱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="app-header">
+      <div class="app-title">할 일 목록</div>
+      <div class="app-date" id="today"></div>
+    </div>
+
+    <div class="input-row">
+      <select id="categorySelect">
+        <option value="very_important">● 매우 중요</option>
+        <option value="important">● 중요</option>
+        <option value="normal" selected>● 보통</option>
+        <option value="less_important">● 덜 중요</option>
+      </select>
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="할 일을 입력하고 Enter 또는 추가 버튼을 누르세요."
+      />
+      <button id="addBtn">추가</button>
+    </div>
+
+    <p class="empty-text" id="emptyText">아직 등록된 할 일이 없습니다.</p>
+    <ul class="todo-list" id="todoList"></ul>
+
+    <div class="footer">
+      <span><span class="counter" id="leftCount">0</span>개 남음</span>
+      <span id="totalCountText">총 0개</span>
+    </div>
+
+    <div class="category-legend">
+      <span class="legend-title">중요도 안내</span>
+      <span class="legend-item legend-very_important">매우 중요: 지금 바로 처리해야 하는 일</span>
+      <span class="legend-item legend-important">중요: 오늘 안에 처리하면 좋은 일</span>
+      <span class="legend-item legend-normal">보통: 여유 있을 때 처리해도 되는 일</span>
+      <span class="legend-item legend-less_important">덜 중요: 기억만 해두면 되는 일</span>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
